@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <style>
+        /* Resetting margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body style */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: purple;
+    height: 100px;
+    width: 100%;
+}
+
+/* Container holds the main layout */
+.container {
+    display: flex;
+    flex: 1; /* Allows it to take up all available space */
+    padding: 20px;
+}
+
+/* Left Sidebar */
+.sidebar {
+    background-color: lightblue;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Sidebar menu items */
+.menu-item {
+    height: 50px;
+    background-color: deepskyblue;
+    border-radius: 5px;
+}
+
+/* Main Content Area */
+.main-content {
+    background-color: white;
+    flex: 1;
+    margin: 0 20px; /* Space between sidebars */
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    background-color: rgb(0, 0, 0);
+    width: 20%;
+    height: 100%;
+}
+
+/* Footer */
+.footer {
+    background-color: deepskyblue;
+    height: 50px;
+    width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar, .right-sidebar {
+        width: 100%;
+        height: auto;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header"></header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <div class="menu-item"></div>
+            <div class="menu-item"></div>
+            <div class="menu-item"></div>
+            <div class="menu-item"></div>
+        </aside>
+
+        <section class="main-content"></section>
+
+        <aside class="right-sidebar"></aside>
+    </div>
+
+    <footer class="footer"></footer>
+</body>
+</html>
